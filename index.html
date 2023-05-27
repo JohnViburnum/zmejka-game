@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Admin">
+   <link rel="stylesheet" href="index.css">
+   <title>Змейка</title>
+</head>
+
+<body>
+   <header>
+      <h1>Змейка</h1>
+      <p class="info" id="span"></p>
+      <p class="info" id="ost"></p>
+      <p>Пауза/продолжить: пробел<br>Управление стрелками</p>
+   </header>
+   <main>
+      <div id="canvas">
+         <canvas></canvas>
+      </div>
+      <div id="controllers">
+         <button id="reload" class="hidden">Начать заново</button>
+         <label for="allCount" id="labelAllCount">Выбери максимальную длину змейки: </label>
+         <select name="allCount" id="allCount">
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+            <option>60</option>
+            <option>70</option>
+            <option>80</option>
+            <option>90</option>
+            <option selected>100</option>
+         </select><br>
+         <span id="gamebox">Игровое поле:</span>
+         <button id="border">Без границ</button>
+         <br>
+         <button id="start">Старт</button>
+      </div>
+
+      <script src="./index.js" defer></script>
+   </main>
+
+</body>
+
+</html>
