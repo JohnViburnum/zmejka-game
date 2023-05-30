@@ -2,49 +2,66 @@
 <html lang="ru">
 
 <head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="author" content="Admin">
-   <link rel="stylesheet" href="index.css">
-   <title>Змейка</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Admin">
+  <link rel="stylesheet" href="index.css">
+  <title>Змейка</title>
 </head>
 
 <body>
-   <header>
-      <h1>Змейка</h1>
-      <p class="info" id="span"></p>
-      <p class="info" id="ost"></p>
-      <p>Пауза/продолжить: пробел<br>Управление стрелками</p>
-   </header>
-   <main>
-      <div id="canvas">
-         <canvas></canvas>
+  <header>
+    <h1>Змейка</h1>
+    <p id="count"></p>
+    <p class="info">Пауза/продолжить: пробел<br>Управление стрелками</p>
+    <button class="pause">Пауза</button>
+  </header>
+  <main>
+    <div id="canvas">
+      <canvas class="hidden"></canvas>
+    </div>
+    <div class="game-end hidden">
+      <p class="game-report"></p>
+      <p class="game-log"></p>
+      <button id="reload">Начать заново</button>
+    </div>
+    <div class="settings">
+      <label for="allCount" id="labelAllCount">Выбери максимальную длину змейки: </label>
+      <select name="allCount" id="allCount">
+        <option>10</option>
+        <option>20</option>
+        <option>30</option>
+        <option>40</option>
+        <option>50</option>
+        <option>60</option>
+        <option>70</option>
+        <option>80</option>
+        <option>90</option>
+        <option selected>100</option>
+      </select>
+      <span id="gamebox">Игровое поле:</span>
+      <div>
+        <label for="border-off">Без границ</label>
+        <input type="radio" name="border" id="border-off" checked>
       </div>
-      <div id="controllers">
-         <button id="reload" class="hidden">Начать заново</button>
-         <label for="allCount" id="labelAllCount">Выбери максимальную длину змейки: </label>
-         <select name="allCount" id="allCount">
-            <option>10</option>
-            <option>20</option>
-            <option>30</option>
-            <option>40</option>
-            <option>50</option>
-            <option>60</option>
-            <option>70</option>
-            <option>80</option>
-            <option>90</option>
-            <option selected>100</option>
-         </select><br>
-         <span id="gamebox">Игровое поле:</span>
-         <button id="border">Без границ</button>
-         <br>
-         <button id="start">Старт</button>
+      <div>
+        <label for="border-on">С границами</label>
+        <input type="radio" name="border" id="border-on">
       </div>
+      <button id="start">Старт</button>
+    </div>
+  </main>
+  <footer>
+    <div class="mobile-controllers">
+      <button class="up">⯅</button>
+      <button class="left">⯇</button>
+      <button class="down">⯆</button>
+      <button class="right">⯈</button>
+    </div>
+  </footer>
 
-      <script src="./index.js" defer></script>
-   </main>
-
+  <script src="index.js" defer></script>
 </body>
 
 </html>
